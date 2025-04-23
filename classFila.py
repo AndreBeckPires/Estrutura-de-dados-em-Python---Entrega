@@ -3,7 +3,7 @@ class Fila():
         self.objetos = []
 
     def push(self,obj):
-        self.objetos.append(obj)
+        self.objetos.insert(0,obj)
     
     def getSize(self):
         return len(self.objetos)
@@ -13,5 +13,8 @@ class Fila():
 
     def printFila(self):
         print(self.objetos)
+
+    def getProximo(self):
+        return self.objetos[len(self.objetos)-1]
 
     
