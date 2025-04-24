@@ -14,14 +14,7 @@ class Nodo:
             self.childrens.append(nodo)
             self.childrens[(len(self.childrens)-1)].setParent(self)
 
-    def printParent(self):
-        print(self.parent)
-    #####
-    def printChildrens(self):
-        print(self.childrens)
-    ########
-    def printValue(self):
-        print(self.valor)
+
     
     def getValue(self):
         return self.valor
@@ -31,10 +24,5 @@ class Nodo:
     
     def getChildrens(self):
         return self.childrens
-    ########
 
-    def haveParent(self):
-        if self.parent != None:
-            return True
-        else:
-            return False
+

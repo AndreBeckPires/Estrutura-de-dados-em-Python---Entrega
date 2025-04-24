@@ -40,18 +40,3 @@ musicas.setChildren(rock)
 
 configs.setChildren(systemConfig)
 
-print(user.getParent())
-print(admin.getParent())
-print("#######")
-print(documentos.getParent())
-print(imagens.getParent())
-print(musicas.getParent())
-print("#######")
-print(configs.getParent())
-
-print(relatorio.getParent())
-print(tcc.getParent())
-print(foto1.getParent())
-print(foto2.getParent())
-print(rock.getParent())
-print(systemConfig.getParent())
