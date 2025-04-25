@@ -40,3 +40,5 @@ musicas.setChildren(rock)
 
 configs.setChildren(systemConfig)
 
+
+print(home.getChildrens())

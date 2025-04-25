@@ -46,3 +46,5 @@ while atendimentos > 0:
     atendimentos -= 1
 
 print("Atendimentos finalizados!")
+
+#O(n) -> Onde N são 10 
