@@ -38,12 +38,12 @@ def buscar_arquivos_por_extensao(nodo, extensao_desejada, caminho_atual="", resu
         resultados = {}
 
     if nodo.isFolder:
-        caminho_completo = f"{caminho_atual}/{nodo.getName()}".strip("/")
+        caminho_completo = f"{caminho_atual}/{nodo.getValue()}".strip("/")
         arquivos_encontrados = []
 
         for filho in nodo.getChildrens():
-            if filho.isFile and filho.getName().endswith(extensao_desejada):
-                arquivos_encontrados.append(filho.getName())
+            if filho.isFile and filho.getValue().endswith(extensao_desejada):
+                arquivos_encontrados.append(filho.getValue())
             elif filho.isFolder:
                 buscar_arquivos_por_extensao(filho, extensao_desejada, caminho_completo, resultados)
 
