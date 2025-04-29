@@ -6,23 +6,23 @@ class Nodo:
         self.isFolder = isFolder
         self.isFile = isFile
 
-    def setParent(self, nodo):
+    def set_parent(self, nodo):
         self.parent = nodo
 
-    def setChildren(self,nodo):
+    def set_children(self,nodo):
         if(self.isFolder):
             self.childrens.append(nodo)
-            self.childrens[(len(self.childrens)-1)].setParent(self)
+            self.childrens[(len(self.childrens)-1)].set_parent(self)
 
 
     
-    def getValue(self):
+    def get_value(self):
         return self.valor
     
-    def getParent(self):
-        return self.parent.getValue()
+    def get_parents(self):
+        return self.parent.get_value()
     
-    def getChildrens(self):
+    def get_childrens(self):
         return self.childrens
 
 

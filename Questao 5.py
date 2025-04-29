@@ -15,22 +15,22 @@ tcc = Nodo("tcc.docx", False, True)
 foto1 = Nodo("foto1.png", False, True)
 foto2 = Nodo("foto2.png", False, True)
 rock = Nodo("rock.mp3", False, True)
-systemConfig = Nodo("system.cfg", False, True)
+system_config = Nodo("system.cfg", False, True)
 
 # Montando a árvore
-home.setChildren(user)
-home.setChildren(admin)
-user.setChildren(documentos)
-user.setChildren(imagens)
-user.setChildren(musicas)
-admin.setChildren(configs)
+home.set_children(user)
+home.set_children(admin)
+user.set_children(documentos)
+user.set_children(imagens)
+user.set_children(musicas)
+admin.set_children(configs)
 
-documentos.setChildren(relatorio)
-documentos.setChildren(tcc)
-imagens.setChildren(foto1)
-imagens.setChildren(foto2)
-musicas.setChildren(rock)
-configs.setChildren(systemConfig)
+documentos.set_children(relatorio)
+documentos.set_children(tcc)
+imagens.set_children(foto1)
+imagens.set_children(foto2)
+musicas.set_children(rock)
+configs.set_children(system_config)
 
 # buscar arquivos 
 def buscar_arquivos_por_extensao(nodo, extensao_desejada, caminho_atual="", resultados=None):
@@ -38,12 +38,12 @@ def buscar_arquivos_por_extensao(nodo, extensao_desejada, caminho_atual="", resu
         resultados = {}
 
     if nodo.isFolder:
-        caminho_completo = f"{caminho_atual}/{nodo.getValue()}".strip("/")
+        caminho_completo = f"{caminho_atual}/{nodo.get_value()}".strip("/")
         arquivos_encontrados = []
 
-        for filho in nodo.getChildrens():
-            if filho.isFile and filho.getValue().endswith(extensao_desejada):
-                arquivos_encontrados.append(filho.getValue())
+        for filho in nodo.get_childrens():
+            if filho.isFile and filho.get_value().endswith(extensao_desejada):
+                arquivos_encontrados.append(filho.get_value())
             elif filho.isFolder:
                 buscar_arquivos_por_extensao(filho, extensao_desejada, caminho_completo, resultados)
 
